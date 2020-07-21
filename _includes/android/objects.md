@@ -263,7 +263,7 @@ myComment.put("parent", ParseObject.createWithoutData("Post", "1zEcyElZ80"));
 By default, when fetching an object, related `ParseObject`s are not fetched.  These objects' values cannot be retrieved until they have been fetched like so:
 
 ```java
-fetchedComment.getParseObject("post")
+fetchedComment.getParseObject("parent")
     .fetchIfNeededInBackground(new GetCallback<ParseObject>() {
         public void done(ParseObject post, ParseException e) {
           String title = post.getString("title");
